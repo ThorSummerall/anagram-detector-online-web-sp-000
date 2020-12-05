@@ -5,13 +5,9 @@ class Anagram
     @anagrams = anagrams
   end
 
-  def match
-    # needs to iterate over array
-    @anagrams.collect do |x, y|
-      x.split == y.split
+  def match(array)
+    array.select do |x|
+      x.split("").sort == @anagrams.split("").sort
     end
-    # find matches
-    # return new array with matches
-    # if no match, return false
   end
 end
