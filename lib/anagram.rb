@@ -7,6 +7,9 @@ class Anagram
 
   def match
     # needs to iterate over array
+    @anagrams.collect do |x, y|
+      x.split == y.split
+    end
     # find matches
     # return new array with matches
     # if no match, return false
